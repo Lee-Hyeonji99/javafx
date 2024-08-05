@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.ReviseMovieController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="영화 관람평 수정">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="205.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="영화 제목" />
+                        <Label text="국가" GridPane.rowIndex="1" />
+                        <Label text="평점" GridPane.rowIndex="2" />
+                        <Label text="한줄평" GridPane.rowIndex="3" />
+                        <Label text="관람일" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtName" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtComments" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="cmbNation" prefHeight="22.0" prefWidth="205.0" promptText="국가 선택" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="datePicker" prefHeight="22.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox fx:id="hBoxRating" onMouseClicked="#onRatingImageClicked" onMouseExited="#onRatingImageEndEntered" onMouseMoved="#onRatingImageMouseMoved" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="imgStar1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar2" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar3" fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar4" fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar5" fitHeight="30.0" fitWidth="30.0" layoutX="100.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </HBox>
+                    </children>
+                </GridPane>
+            <HBox alignment="CENTER" prefHeight="8.0" prefWidth="280.0" spacing="30.0">
+               <children>
+                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefWidth="114.0" text="수정" textAlignment="CENTER">
+                          <font>
+                              <Font size="16.0" />
+                          </font>
+                      </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefWidth="114.0" text="취소" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
