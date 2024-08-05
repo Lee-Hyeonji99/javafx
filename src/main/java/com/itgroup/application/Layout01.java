@@ -9,6 +9,6 @@ public class Layout01 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
+        // 당연히 안되겟지
     }
 }
